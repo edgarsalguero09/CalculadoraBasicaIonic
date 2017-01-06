@@ -1,0 +1,32 @@
+<ion-view title="Inicio">
+	<ion-content>
+		<div class="row">
+			<div class="col">
+				<div class="list">
+					<div class="item item-input">
+						<input type="number" ng-model="numero1" placeholder="Numero 1">
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="list">
+					<div class="item item-input">
+						<input type="number" ng-model="numero2" placeholder="Numero 2">
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="list">
+			<li class="item text-center">
+                <button class="button button-positive" ng-click="sumar(numero1, numero2)">Sumar</button>
+                <button class="button button-positive" ng-click="restar(numero1, numero2)">Restar</button>
+                <button class="button button-positive" ng-click="multiplicar(numero1, numero2)">Multiplicar</button>
+                <button class="button button-positive" ng-click="dividir(numero1, numero2)">Dividir</button>
+            </li>
+		</ul>
+		<h2 class="text-center">Respuesta</h2>
+		<div class="list" ng-repeat="resp in resultado">
+			<div class="item">{{ resp }}</div>
+		</div>
+	</ion-content>
+</ion-view>
